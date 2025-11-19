@@ -1,10 +1,14 @@
 from app.main import main
 from flask import render_template
+from app.models import Product
 
 @main.route('/')
-def home():
+def index():
     """Homepage"""
-    return "<h3>Homepage</h3>"
+
+    products = Product.query.limit(6).all()
+
+    return render_template('main/index.html',products=products)
 
 @main.route('/products')
 def products():
