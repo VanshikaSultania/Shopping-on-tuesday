@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Shopping On Tuesday{% endblock %}</title>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="{{ url_for('static', filename='uploads/logo.png') }}" 
+                     alt="Dropship Store Logo" 
+                     onerror="this.style.display='none'">
+                <span>🛍️ Shopping On Tuesday</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/admin/">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main Content (filled by child templates) -->
+    <main>
+        {% block content %}
+        <!-- Child templates put their content here -->
+        {% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Shopping On Tuesday. Anime & Stationery</p>
+            
+            <div class="footer-links">
+                <a href="#" id="aboutLink">About Me</a>
+                <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+                <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- About Me Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-header">
+                <img src="{{ url_for('static', filename='uploads/profile.jpg') }}" 
+                     alt="Pardeep Singh"
+                     onerror="this.src='https://ui-avatars.com/api/?name=Pardeep+Singh&size=80&background=3498db&color=fff'">
+                <div>
+                    <h2>Pardeep Singh</h2>
+                    <p style="color: var(--text-secondary); margin: 0;">Learner</p>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <p><strong>👋 Hey there!</strong></p>
+                <p>I'm Pardeep Singh, a Python developer and aspiring entrepreneur. This dropshipping platform is my journey into building real-world applications while learning Flask and web development.</p>
+                
+                <p><strong>🎯 What I Do:</strong></p>
+                <ul>
+                    <li>🐍 Learning Python & Flask</li>
+                    <li>🛍️ Dropshipping anime merchandise & stationery</li>
+                    <li>💻 Building projects to learn by doing</li>
+                    <li>📚 Focused on practical skills over theory</li>
+                </ul>
+                
+                <p><strong>🚀 This Project:</strong></p>
+                <p>Built from scratch to understand web development, databases, authentication, and deployment. Every line of code is a learning experience!</p>
+                
+                <p><strong>📬 Connect:</strong></p>
+                <p>Feel free to reach out if you're also learning or want to collaborate!</p>
+                
+                <p style="margin-top: 1rem;">
+                    <a href="https://instagram.com/blu3_bird_" class="btn" target="_blank">Instagram</a>
+                    <a href="https://github.com/blu3-bird" class="btn" target="_blank">GitHub</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript for Modal (Minimal!) -->
+    <script>
+        // Open About Modal
+        document.getElementById('aboutLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('aboutModal').classList.add('active');
+        });
+        
+        // Close Modal
+        function closeModal() {
+            document.getElementById('aboutModal').classList.remove('active');
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('aboutModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
