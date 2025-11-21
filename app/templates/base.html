@@ -110,6 +110,33 @@
                 closeModal();
             }
         });
+
+        function filterProducts(category) {
+            // Get all product cards
+            const products = document.querySelectorAll('.product-card');
+            
+            // Get all filter buttons
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide products based on category
+            products.forEach(product => {
+                const productCategory = product.getAttribute('data-category');
+                
+                if (category === 'all') {
+                    product.classList.remove('hidden');
+                } else if (productCategory === category) {
+                    product.classList.remove('hidden');
+                } else {
+                    product.classList.add('hidden');
+                }
+            });
+        }
     </script>
 </body>
 </html>
