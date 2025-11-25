@@ -18,7 +18,7 @@ def login():
 
     if form.validate_on_submit():
 
-        admin = Admin.query.filter_by(username=form.username.data).first_or_404()
+        admin = Admin.query.filter_by(username=form.username.data).first()
 
         if admin is None or not admin.check_password(form.password.data):
             flash("Invalid Username or Password",'error')
@@ -30,9 +30,10 @@ def login():
         next_page = request.args.get('next')
 
         if next_page:
-            return redirect(url_for(next_page))
+            return redirect(next_page)
         
         return redirect(url_for('admin.dashboard'))
+    
     return render_template('auth/login.html', form=form)
     
 @auth.route('/logout')
