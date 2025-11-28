@@ -22,6 +22,7 @@ This project exists because of your help. Whether you fixed a bug, added a featu
 | Avatar | Name | Contributions |
 |--------|------|---------------|
 | <img src="https://github.com/rooqidev.png" width="50"> | [Rooqidev ](https://github.com/rooqidev ) | 💻  |
+| <img src="https://github.com/VanshikaSultania.png" width="50"> | [Vanshika Sultania ](https://github.com/VanshikaSultania ) | 💻  |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
