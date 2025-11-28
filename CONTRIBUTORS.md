@@ -23,6 +23,8 @@ This project exists because of your help. Whether you fixed a bug, added a featu
 |--------|------|---------------|
 | <img src="https://github.com/rooqidev.png" width="50"> | [Rooqidev ](https://github.com/rooqidev ) | 💻  |
 | <img src="https://github.com/VanshikaSultania.png" width="50"> | [Vanshika Sultania ](https://github.com/VanshikaSultania ) | 💻  |
+| <img src="https://github.com/yogesh-dot-com.png" width="50"> | [Yogesh ](https://github.com/yogesh-dot-com ) | 💻  |
+
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
