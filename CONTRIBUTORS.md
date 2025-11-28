@@ -21,7 +21,7 @@ This project exists because of your help. Whether you fixed a bug, added a featu
 
 | Avatar | Name | Contributions |
 |--------|------|---------------|
-| <img src="https://github.com/username.png" width="50"> | [Name](https://github.com/username) | 💻 🐛 |
+| <img src="https://github.com/rooqidev .png" width="50"> | [Rooqidev ](https://github.com/rooqidev ) | 💻  |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
